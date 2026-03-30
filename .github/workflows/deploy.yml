@@ -3,7 +3,7 @@ name: Vue Auto Deploy
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   deploy:
