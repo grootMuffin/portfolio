@@ -3,7 +3,7 @@ name: Vue Auto Deploy
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
@@ -32,7 +32,7 @@ jobs:
 
       - name: Sync to S3
         # 注意这里的 ./dist，如果是 Vue CLI 或 Vite，确保路径正确
-        run: aws s3 sync ./build s3://${{ secrets.AWS_S3_BUCKET_NAME }} --delete
+        run: aws s3 sync ./build/client s3://${{ secrets.AWS_S3_BUCKET_NAME }} --delete
 
       - name: Clear CloudFront Cache
         run: |
