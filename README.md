@@ -32,6 +32,7 @@ npm run dev:storybook
 I've set up the site using Cloudflare for hosting. Deploy the site to Cloudflare Pages:
 
 ```bash
+npx wrangler pages project create portfolio
 npm run deploy
 ```
 
